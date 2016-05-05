@@ -31,10 +31,12 @@ sys.path.insert(0, os.path.abspath('_ext'))
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['edit_on_github']
+#extensions = ['edit_on_github']
+extensions = []
 
-edit_on_github_project = 'ivan749/doc'
-edit_on_github_branch = 'master/dkim'
+
+#edit_on_github_project = 'ivan749/doc'
+#edit_on_github_branch = 'master/dkim'
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -121,6 +123,15 @@ import sphinx_rtd_theme
 html_theme = "sphinx_rtd_theme"
 
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+
+html_context = {
+  "display_github": True,
+  "github_user": "ivan749",
+  "github_repo": "doc",
+  "github_version": "master",
+  "conf_py_path": "/dkim/",
+  "source_suffix": source_suffix,
+}
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
