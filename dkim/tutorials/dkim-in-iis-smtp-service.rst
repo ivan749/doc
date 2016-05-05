@@ -1,6 +1,6 @@
 
 
-Setup DKIM in IIS SMTP Service
+Deploy DKIM in IIS SMTP Service
 ==================================
 
 **IIS SMTP Server** is a common Windows built-in SMTP service.
@@ -8,6 +8,10 @@ Setup DKIM in IIS SMTP Service
 thereby allowing email sender claims some responsibility for the email. 
 In this tutorial, I will introduce how to add DKIM signature to 
 outgoing emails in IIS SMTP server.
+
+.. contents:: Sections:
+  :local:
+  :depth: 1
 
 How DKIM works？
 ----------------
@@ -21,6 +25,8 @@ from a person or system authorized to send email for that domain.
 
 Therefore, to sign an email with DKIM in IIS SMTP Server, you MUST have a private key/public 
 key pair for email signing. The work flow is illustrated as follows: 
+
+.. image:: ../_static/dkim_work_intro.png
 
 Because DKIM signer uses private key to sign the email, recipient system uses public key to 
 verify the signature, therefore, if signer doesn't expose the private key to third-party, 
