@@ -34,7 +34,7 @@ sys.path.insert(0, os.path.abspath('_ext'))
 extensions = ['edit_on_github']
 
 edit_on_github_project = 'ivan749/doc'
-edit_on_github_branch = 'master'
+edit_on_github_branch = 'master/dkim'
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
